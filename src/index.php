@@ -11,7 +11,16 @@
 
 <?php
 
-    echo "Hola";
+    $personas = array(
+        "Persona1" => "Lucas",
+        "Persona2" => "Juan",
+        "Persona3" => "Mateo"
+    );
+    unset($personas["Persona1"]);
+    foreach ($personas as $key => $persona){
+        echo $key . " -> " . $persona;
+        echo "<br>";
+    }
 
 ?>
 

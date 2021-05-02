@@ -1,24 +1,33 @@
 version: '3.5'
-services:
-  php:
-    container_name: php-pruebas-esi
-    image: lucaspintos909/php-pdo-mysqli
-    ports:
-      - 80:80
-    volumes:
-      - ./:/var/www/html
-    depends_on:
-      - db
+  services:
+    php:
+      container_name: php
+      image: lucaspintos909/php-pdo-mysqli:latest
+      ports:
+        - 8080:80
+      volumes:
+        - ./src:/var/www/html/
+      depends_on:
+        - db
+      networks:
+        - docker-net
 
-  db:
-    container_name: db-pruebas-esi
-    image: mysql:8.0 # Imagen de docker-hub de mysql en la version 8.0
-    environment:
-      MYSQL_DATABASE: pruebas_esi
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin
-      MYSQL_ROOT_PASSWORD: root
-    ports:
-      - 3306:3306
-    volumes:
-      - ./mysql:/var/lib/mysql
+    db:
+      container_name: db
+      image: mysql:8.0
+      environment:
+        MYSQL_DATABASE: task_db
+        MYSQL_USER: admin
+        MYSQL_PASSWORD: admin
+        MYSQL_ROOT_PASSWORD: root
+      ports:
+        - 3360:3306
+      volumes:
+        - ./mysql:/var/lib/mysql
+        - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql # Archivo para inicializar la creacion de las tablas y base de datos
+      networks:
+        - docker-net
+
+  networks:
+    docker-net:
+      driver: bridge
