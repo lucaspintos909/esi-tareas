@@ -6,5 +6,5 @@ jobs:
     machine: true
     steps:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -t lucaspintos909/esi-pruebas:$CIRCLE_SHA1 .
+      - run: docker build . -t lucaspintos909/esi-pruebas:$CIRCLE_SHA1
       - run: docker push lucaspintos909/esi-pruebas:$CIRCLE_SHA1
