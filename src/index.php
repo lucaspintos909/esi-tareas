@@ -23,7 +23,7 @@
     }
     echo "<br>";
 
-    echo "Pruebas Lucxas Pintos";
+    echo "Otras Pruebas Lucxas Pintos";
 
 ?>
 
