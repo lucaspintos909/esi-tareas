@@ -5,6 +5,9 @@ jobs:
   build:
     machine: true
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f4:0e:ef:76:d9:5d:0b:8b:60:d5:f3:95:f4:ec:df:11"
       - checkout
       - run:
           name: DockerHub Login
@@ -15,3 +18,6 @@ jobs:
       - run:
           name: Docker Push to lucaspintos909/esi-pruebas
           command: docker push lucaspintos909/esi-pruebas:$CIRCLE_SHA1
+      - run:
+          name: Script deploy.sh
+          command: ssh -o StrictHostKeyChecking=no ubuntu@tests.lucaspintos.tech "/bin/bash /home/ubuntu/esi-pruebas/deploy/deploy.sh $CIRCLE_SHA1"
