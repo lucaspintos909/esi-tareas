@@ -23,7 +23,7 @@
     }
     echo "<br>";
 
-    echo "Pruebas 1234";
+    echo "Pruebas Lucxas Pintos";
 
 ?>
 
