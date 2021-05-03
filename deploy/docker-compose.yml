@@ -16,7 +16,7 @@ services:
 
   php:
     container_name: php
-    image: lucaspintos909/esi-pruebas:931e24bede1304b6515046e53211f6d583f6feb2
+    image: lucaspintos909/esi-pruebas:14499467c11a4df44b3b3bfdf8c40af16930da1d
     ports:
       - 8080:80
     #volumes:
