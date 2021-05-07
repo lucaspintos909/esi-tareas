@@ -16,7 +16,6 @@
 
 <body>
 
-
 <nav class="navbar navbar-dark navbar-expand-lg bg-primary shadow" >
     <div class="container">
         <a class="navbar-brand" href="<?=URL?>">Pruebas Esi</a>
