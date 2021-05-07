@@ -1,4 +1,13 @@
 version: 2.1
+
+workflows: # Define a Workflow running the build job, then the deploy job
+  version: 2
+  build-deploy: # Make a workflow to build and deploy your project
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: main # Only deploy when the commit is on the Master branch
 jobs:
   build:
     machine: true
