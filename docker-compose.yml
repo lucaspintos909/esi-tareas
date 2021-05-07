@@ -1,5 +1,5 @@
 version: '3.5'
-  services:
+services:
     php:
       container_name: php
       image: lucaspintos909/php-pdo-mysqli:latest
@@ -16,7 +16,7 @@ version: '3.5'
       container_name: db
       image: mysql:8.0
       environment:
-        MYSQL_DATABASE: task_db
+        MYSQL_DATABASE: pruebas_db
         MYSQL_USER: admin
         MYSQL_PASSWORD: admin
         MYSQL_ROOT_PASSWORD: root
@@ -24,10 +24,9 @@ version: '3.5'
         - 3360:3306
       volumes:
         - ./mysql:/var/lib/mysql
-        - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql # Archivo para inicializar la creacion de las tablas y base de datos
       networks:
         - docker-net
 
-  networks:
-    docker-net:
-      driver: bridge
+networks:
+  docker-net:
+    driver: bridge
