@@ -15,7 +15,7 @@ include_once "../includes/header.php";
 
         <div class="mt-3">
             <p class="h2">Letra</p>
-            <ol>
+            <ol type="a">
                 <li>
                     <p>
                         Utilizando solo PHP realiza una sencilla calculadora. Setea un par de variables con diferentes números y
@@ -38,7 +38,7 @@ include_once "../includes/header.php";
             <ul>
                 <?php
                 $num1 = 10;
-                $num2 = 2;
+                $num2 = 31;
 
                 echo "<li> Valor 1: " . $num1 . "</li>";
                 echo "<li> Valor 2: " . $num2 . "</li>";
@@ -49,11 +49,13 @@ include_once "../includes/header.php";
             <div class="mt-3">
                 <div class="accordion" id="accordionExample">
                     <div class="card">
+
+                        <!--CARD DEL PRIMER EJERCICIO-->
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#collapseOne" aria-controls="collapseOne">
-                                    Operaciones básicas
+                                    1. Operaciones básicas
                                 </button>
                             </h5>
                         </div>
@@ -82,6 +84,67 @@ include_once "../includes/header.php";
                                     <p class="list-group-item">
                                         <b>Division</b>: <?=$num1?> / <?=$num2?> = <?=number_format($num1 / $num2, 1);?>
 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--CARD DEL SEGUNDO EJERCICIO-->
+
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-controls="collapseTwo">
+                                    2. Ver si el primer número es múltiplo del segundo.
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body row justify-content-md-center">
+                                <div class="list-group mt-2 w-25 shadow-sm col">
+                                    <p class="list-group-item ">
+                                        <?php
+                                        echo "Si el resto de la division es 0 entonces es multiplo. <br>";
+
+                                        echo "<br>";
+
+                                        echo $num1 . " % " . $num2 . " = " . ($num1 % $num2) . " entonces " . ($num1 % $num2 == 0 ? "son multiplos" : "no son multiplos");
+
+                                        ?>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--CARD DEL TERCER EJERCICIO-->
+
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-controls="collapseThree">
+                                    3. Cual es el mayor, el menor y si son iguales.
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                            <div class="card-body row justify-content-md-center">
+                                <div class="list-group mt-2 w-25 shadow-sm col">
+                                    <p class="list-group-item">
+                                        <?php
+                                            echo $num1 . " y " . $num2;
+                                            echo $num1 == $num2 ?  " son iguales." : " no son iguales.";
+
+                                            echo "<br>";
+
+                                            if($num1 > $num2){
+                                                echo $num1 . " es mas grande que " . $num2 . ".";
+                                            }elseif ($num2 > $num1){
+                                                echo $num2 . " es mas grande que " . $num1 . ".";
+                                            }
+                                        ?>
                                     </p>
                                 </div>
                             </div>
