@@ -30,4 +30,4 @@ jobs:
       - run:
           name: Script deploy.sh
           # Me conecto cons ssh al servidor y ejecuto el archivo de deploy
-          command: ssh -o StrictHostKeyChecking=no ubuntu@tests.lucaspintos.tech "/bin/bash /home/ubuntu/esi-pruebas/deploy/deploy.sh $CIRCLE_SHA1"
+          command: ssh -o StrictHostKeyChecking=no ubuntu@esi.lucaspintos.tech "/bin/bash /home/ubuntu/esi-pruebas/deploy/deploy.sh $CIRCLE_SHA1"
