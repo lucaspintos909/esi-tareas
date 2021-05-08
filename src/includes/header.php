@@ -27,7 +27,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="<?=URL?>">Inicio</a>
                     </li>
@@ -43,6 +43,9 @@
                         </div>
                     </li>
                 </ul>
+                <span class="navbar-text">
+                    Lucas Pintos - 3BE
+                </span>
             </div>
         </div>
     </nav>

@@ -54,7 +54,7 @@ include_once "../includes/header.php";
             <div class=" mt-2 w-50 col">
                 <p class="list-group-item text-color bg-color">
                     <?php
-                      echo "Mi nombre es " . $nombre . " y tengo " . $edad . " años, vivo " . $direccion . ", mi teléfono de contacto es " . $telefono . " y mi casilla de correo es " . $correo;
+                      echo "Mi nombre es " . $nombre . " y tengo " . $edad . " años, mi direccion es: " . $direccion . ", mi teléfono de contacto es " . $telefono . " y mi casilla de correo es " . $correo . ".";
                     ?>
                 </p>
             </div>
