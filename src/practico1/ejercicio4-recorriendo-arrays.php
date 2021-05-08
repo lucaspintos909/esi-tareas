@@ -33,7 +33,7 @@ include_once "../includes/header.php";
         
         <div class="d-flex">
            <div>
-                <p class="h1">Variables</p>
+                <p class="h3">Variables</p>
                 <ul>
                     <?php
                         $countries = array("Argentina", "Brasil", "Mexico", "Colombia", "Ecuador", "Uruguay", "Peru");
