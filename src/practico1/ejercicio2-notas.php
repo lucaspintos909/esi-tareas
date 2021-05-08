@@ -43,12 +43,11 @@ include_once "../includes/header.php";
 
 
         <div class="mt-3">
-            <div class="accordion" id="accordionExample">
-                <div class="justify-content-md-center">
-                    <div class=" mt-2 w-25 col">
-                        <p class="list-group-item ">
-                            La nota es:
-                            <?php
+            <div class="justify-content-md-center">
+                <div class=" mt-2 w-25 col">
+                    <p class="list-group-item ">
+                        La nota es:
+                        <?php
                                 switch ($nota) {
                                     case 1:
                                         echo "uno";
@@ -88,9 +87,9 @@ include_once "../includes/header.php";
                                         break;
                                 }
                             ?>
-                            <br>
-                            Nivel:
-                            <?php
+                        <br>
+                        Nivel:
+                        <?php
                                 if($nota <= 5){
                                     echo " Insuficiente";
                                 }elseif ($nota >= 6 && $nota <= 9) {
@@ -101,15 +100,13 @@ include_once "../includes/header.php";
                                     echo " Excelente";
                                 }
                             ?>
-                        </p>
-                    </div>
+                    </p>
                 </div>
-
-
             </div>
-
         </div>
+
     </div>
+</div>
 </div>
 
 <?php
