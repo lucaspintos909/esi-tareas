@@ -37,8 +37,8 @@ include_once "../includes/header.php";
             <p class="h1">Variables</p>
             <ul>
                 <?php
-                $num1 = 10;
-                $num2 = 31;
+                $num1 = rand(1,20);
+                $num2 = rand(1,20);
 
                 echo "<li> Valor 1: " . $num1 . "</li>";
                 echo "<li> Valor 2: " . $num2 . "</li>";
@@ -55,7 +55,7 @@ include_once "../includes/header.php";
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#collapseOne" aria-controls="collapseOne">
-                                    1. Operaciones básicas
+                                    a. Operaciones básicas
                                 </button>
                             </h5>
                         </div>
@@ -95,7 +95,7 @@ include_once "../includes/header.php";
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#collapseTwo" aria-controls="collapseTwo">
-                                    2. Ver si el primer número es múltiplo del segundo.
+                                    b. Ver si el primer número es múltiplo del segundo.
                                 </button>
                             </h5>
                         </div>
@@ -124,7 +124,7 @@ include_once "../includes/header.php";
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                         data-target="#collapseThree" aria-controls="collapseThree">
-                                    3. Cual es el mayor, el menor y si son iguales.
+                                    c. Cual es el mayor, el menor y si son iguales.
                                 </button>
                             </h5>
                         </div>
