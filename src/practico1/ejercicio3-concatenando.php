@@ -36,17 +36,17 @@ include_once "../includes/header.php";
         <p class="h1">Variables</p>
         <ul>
             <?php
-                $nombre         = "Lucas";
-                $edad           = 18;
-                $telefono       = "098765432";
-                $direccion      = "De La Puerta Pa' Dentro 4321 esq. Vereda, Canelones, Uruguay";
-                $correo         = "lucaspintos909@gmail.com";
+                $name       = "Lucas";
+                $age        = 18;
+                $phone      = "098765432";
+                $address    = "De La Puerta Pa' Dentro 4321 esq. Vereda, Canelones, Uruguay";
+                $email      = "lucaspintos909@gmail.com";
 
-                echo "<li> Nombre: "        . $nombre       ."</li>";
-                echo "<li> Edad: "          . $edad         . "</li>";
-                echo "<li> Telefono: "      . $telefono     . "</li>";
-                echo "<li> Direccion: "     . $direccion    . "</li>";
-                echo "<li> Correo: "        . $correo       . "</li>";
+                echo "<li> Nombre: "        . $name       ."</li>";
+                echo "<li> Edad: "          . $age        . "</li>";
+                echo "<li> Telefono: "      . $phone     . "</li>";
+                echo "<li> Direccion: "     . $address    . "</li>";
+                echo "<li> Correo: "        . $email       . "</li>";
             ?>
         </ul>
 
@@ -54,7 +54,7 @@ include_once "../includes/header.php";
             <div class=" mt-2 w-50 col">
                 <p class="list-group-item text-color bg-color">
                     <?php
-                      echo "Mi nombre es " . $nombre . " y tengo " . $edad . " años, mi direccion es: " . $direccion . ", mi teléfono de contacto es " . $telefono . " y mi casilla de correo es " . $correo . ".";
+                      echo "Mi nombre es " . $name . " y tengo " .$age. " años, mi direccion es: " . $address . ", mi teléfono de contacto es " . $phone . " y mi casilla de correo es " . $email . ".";
                     ?>
                 </p>
             </div>
