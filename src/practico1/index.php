@@ -15,7 +15,7 @@ include_once '../includes/header.php';
         <a href="<?=URL?>practico1/ejercicio3-concatenando.php" class="list-group-item list-group-item-action">Ejercicio 3 - Concatenando</a>
         <a href="<?=URL?>practico1/ejercicio4-recorriendo-arrays.php" class="list-group-item list-group-item-action">Ejercicio 4 - Recorriendo Arrays</a>
         <a href="<?=URL?>practico1/ejercicio5-array-multidimensional.php" class="list-group-item list-group-item-action">Ejercicio 5 - Recorriendo arrays multidimensionales</a>
-        <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+        <a href="<?=URL?>practico1/ejercicio6-formularios.php" class="list-group-item list-group-item-action">Ejercicio 6 - Formularios</a>
     </div>
 </div>
 
