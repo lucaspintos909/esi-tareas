@@ -14,16 +14,17 @@ services:
 
     db:
       container_name: db_esi
-      image: mysql:8.0
+      image: mariadb:10
       environment:
         MYSQL_DATABASE: tareas_esi
         MYSQL_USER: admin
         MYSQL_PASSWORD: admin
         MYSQL_ROOT_PASSWORD: root
       ports:
-        - 3360:3306
+        - 3306:3306
       volumes:
         - ./mysql:/var/lib/mysql
+        - ./tablas.sql:/docker-entrypoint-initdb.d/setup.sql # Archivo para la creacion de las tablas
       networks:
         - docker-net
 
