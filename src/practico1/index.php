@@ -7,12 +7,12 @@ include_once '../includes/header.php';
 
 $ejercicios = array(
 
-    "Ejercicio 1 - Calculadora"                             => "practico1/ejercicio1-calculadora.php",
-    "Ejercicio 2 - Notas"                                   => "practico1/ejercicio2-notas.php",
-    "Ejercicio 3 - Concatenando"                            => "practico1/ejercicio3-concatenando.php",
-    "Ejercicio 4 - Recorriendo Arrays"                      => "practico1/ejercicio4-recorriendo-arrays.php",
-    "Ejercicio 5 - Recorriendo arrays multidimensionales"   => "practico1/ejercicio5-array-multidimensional.php",
-    "Ejercicio 6 - Formularios"                             => "practico1/ejercicio6-formularios.php",
+    "Ejercicio 1 - Calculadora"                             => "ejercicio1-calculadora.php",
+    "Ejercicio 2 - Notas"                                   => "ejercicio2-notas.php",
+    "Ejercicio 3 - Concatenando"                            => "ejercicio3-concatenando.php",
+    "Ejercicio 4 - Recorriendo Arrays"                      => "ejercicio4-recorriendo-arrays.php",
+    "Ejercicio 5 - Recorriendo arrays multidimensionales"   => "ejercicio5-array-multidimensional.php",
+    "Ejercicio 6 - Formularios"                             => "ejercicio6-formularios.php",
 
 );
 
@@ -27,7 +27,7 @@ $ejercicios = array(
 
         <?php
         foreach ($ejercicios as $ejercicio => $ruta) {
-            echo '<a href="' . URL . $ruta . '" class="list-group-item list-group-item-action">' . $ejercicio . '</a>';
+            echo '<a href="' . URL_PRACTICO1 . $ruta . '" class="list-group-item list-group-item-action">' . $ejercicio . '</a>';
         }
         ?>
         
