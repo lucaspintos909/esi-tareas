@@ -40,17 +40,15 @@ $contacts = $db->query("SELECT * FROM contacts");
             </thead>
             <tbody>
                 <?php
-                foreach ($contacts as $contact) {
-                    echo "<tr>";
+                foreach ($contacts as $contact) { ?>
+                    <tr>
 
-                    echo "<th scope='row'>" . $contact['phone'] . "</th>";
+                        <th scope='row'> <?= $contact['phone'] ?> </th>
+                        <td> <?= $contact['name'] ?> </td>
+                        <td> <?= $contact['last_name'] ?> </td>
 
-                    echo "<td>" . $contact['name'] . "</td>";
-                    echo "<td>" . $contact['last_name'] . "</td>";
-
-                    echo "</tr>";
-                }
-                ?>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
 
@@ -97,14 +95,19 @@ $contacts = $db->query("SELECT * FROM contacts");
 </div>
 
 
-<div class="alert-fixed">
-    <div class="alert alert-danger alert-dismissible fade show fixed-bottom alert-fit-content" role="alert">
-        
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+<?php
+if (isset($_GET['message'])) { ?>
+
+    <div class="alert-fixed">
+        <div class="alert alert-danger alert-dismissible fade show fixed-bottom alert-fit-content" role="alert">
+            <?= $_GET['message'] ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
-</div>
+
+<?php } ?>
 
 <?php
 include_once '../includes/footer.php';
