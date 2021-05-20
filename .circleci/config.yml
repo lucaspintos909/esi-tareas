@@ -23,11 +23,11 @@ jobs:
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS
       - run:
           name: Docker Build
-          command: docker build -t lucaspintos909/esi-pruebas:$CIRCLE_SHA1 .
+          command: docker build -t lucaspintos909/esi-tareas:$CIRCLE_SHA1 .
       - run:
-          name: Docker Push to lucaspintos909/esi-pruebas
-          command: docker push lucaspintos909/esi-pruebas:$CIRCLE_SHA1
+          name: Docker Push to lucaspintos909/esi-tareas
+          command: docker push lucaspintos909/esi-tareas:$CIRCLE_SHA1
       - run:
           name: Script deploy.sh
           # Me conecto cons ssh al servidor y ejecuto el archivo de deploy
-          command: ssh -o StrictHostKeyChecking=no ubuntu@esi.lucaspintos.tech "/bin/bash /home/ubuntu/esi-pruebas/deploy/deploy.sh $CIRCLE_SHA1"
+          command: ssh -o StrictHostKeyChecking=no ubuntu@esi.lucaspintos.tech "/bin/bash /home/ubuntu/esi-tareas/deploy/deploy.sh $CIRCLE_SHA1"
