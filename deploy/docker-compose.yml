@@ -20,8 +20,8 @@ services:
     ports:
       - 8080:80
     restart: always
-      volumes:
-        - ./const.php:/var/www/html/const.php
+    volumes:
+      - ./const.php:/var/www/html/const.php
     depends_on:
       - db
     networks:
