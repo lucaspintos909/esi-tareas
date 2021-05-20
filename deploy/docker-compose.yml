@@ -16,7 +16,7 @@ services:
 
   php:
     container_name: php
-    image: lucaspintos909/esi-pruebas:14499467c11a4df44b3b3bfdf8c40af16930da1d
+    image: lucaspintos909/esi-tareas
     ports:
       - 8080:80
     restart: always
@@ -29,9 +29,9 @@ services:
 
   db:
     container_name: db
-    image: mysql:8.0
+    image: mariadb:10
     environment:
-      MYSQL_DATABASE: task_db
+      MYSQL_DATABASE: tareas_esi
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
       MYSQL_ROOT_PASSWORD: root
@@ -39,7 +39,7 @@ services:
       - 3360:3306
     volumes:
       - ./mysql:/var/lib/mysql
-      - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql # Archivo para inicializar la creacion de las tablas y base de datos
+      - ./tablas.sql:/docker-entrypoint-initdb.d/setup.sql # Archivo para inicializar la creacion de las tablas y base de datos
     networks:
       - docker-net
 
