@@ -11,25 +11,29 @@ if(isset($_POST['phone'],$_POST['name'],$_POST['last_name'])){
     $name = $_POST['name'];
     $last_name = $_POST['last_name'];
 
-    if($phone > 999999999){
-        header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=El+numero+de+telefono+es+muy++largo");
-    }elseif (strlen($name) > 15) {
-        header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=El+nombre+es+muy++largo");
+    if (strlen($name) > 15) {
+        header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=El+nombre+es+muy+largo");
     }elseif (strlen($last_name) > 15) {
-        header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=El+nombre+es+muy++largo");
+        header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=El+apellido+es+muy+largo");
     }
-
-    $query = "INSERT INTO contacts(phone, name, last_name) VALUES (?, ?, ?)";
-
-    $result = $db->query($query , [$phone, $name, $last_name]);
-
-    if($result){
-
+    
+    try {
+        
+        $query = "INSERT INTO contacts(phone, name, last_name) VALUES (?, ?, ?)";
+        
+        $result = $db->query($query , [$phone, $name, $last_name]);
+        
         header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php");
-
-    }else{
-
+        
+    } catch (PDOException $exception) {
+        
+        // Si ocurre un error en la consulta no se rompe la pagina, solo redirecciona con un mensaje de error
         header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=Ha+ocurrido+un+error");
 
     }
+
+}else{
+
+    header("Location: " . URL_EJERCICIOS . "obteniendo_datos_bd.php?message=Ha+ocurrido+un+error+con+los+campos+ingresados");
+
 }
