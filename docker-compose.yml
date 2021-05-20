@@ -1,8 +1,8 @@
 version: '3.5'
 services:
     php:
-      container_name: php
-      image: lucaspintos909/php-pdo-mysqli:latest
+      container_name: php_esi
+      build: .
       ports:
         - 8080:80
       volumes:
@@ -13,17 +13,18 @@ services:
         - docker-net
 
     db:
-      container_name: db
-      image: mysql:8.0
+      container_name: db_esi
+      image: mariadb:10
       environment:
-        MYSQL_DATABASE: pruebas_db
+        MYSQL_DATABASE: tareas_esi
         MYSQL_USER: admin
         MYSQL_PASSWORD: admin
         MYSQL_ROOT_PASSWORD: root
       ports:
-        - 3360:3306
+        - 3306:3306
       volumes:
         - ./mysql:/var/lib/mysql
+        - ./tablas.sql:/docker-entrypoint-initdb.d/setup.sql # Archivo para la creacion de las tablas
       networks:
         - docker-net
 
