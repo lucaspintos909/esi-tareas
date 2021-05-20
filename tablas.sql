@@ -1,7 +1,7 @@
 use tareas_esi;
 
 create table if not exists contacts(
-    phone varchar(9) primary key,
+    phone varchar(15) primary key,
     name varchar(15) not null ,
     last_name varchar(15) not null
 );
