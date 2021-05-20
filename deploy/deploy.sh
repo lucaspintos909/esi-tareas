@@ -1,4 +1,4 @@
   #!/bin/bash
-  cd /home/ubuntu/esi-pruebas/deploy
-  sed -i "s/esi-pruebas:.*/esi-pruebas:$1/g" docker-compose.yml
+  cd /home/ubuntu/esi-tareas/deploy
+  sed -i "s/esi-tareas:.*/esi-tareas:$1/g" docker-compose.yml
   docker-compose up -d
